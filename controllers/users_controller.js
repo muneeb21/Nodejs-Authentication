@@ -1,5 +1,5 @@
 const User = require('../models/user');
-
+const bcrypt=require('bcryptjs');
 
 module.exports.profile = async function(req, res){
 
@@ -55,14 +55,18 @@ module.exports.newPassword= async function(req,res){
           req.flash('error','User not valid');
           return res.redirect('back');
         }
-        if(user.password!=req.body.old_password){
+        let result=await bcrypt.compare(req.body.old_password,user.password);
+        if(!result){
             console.log("Old password not valid");
             req.flash('error','Invalid old password');
           return res.redirect('back');
         }
-        User.findByIdAndUpdate(user.id, req.body, function(err, user){
+        const pwd=req.body.password;
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(pwd, salt);
+        User.findByIdAndUpdate(user.id, {password:hashedPassword}, function(err, user){
             console.log("Updated password"); 
-                   
+             req.flash('success','Password updated');      
             return res.redirect('back');
                     });
 
@@ -132,11 +136,17 @@ try{
                         req.flash('error','Confirm password does not match');
                         return res.redirect('back');
                     }
-                User.create(req.body, function(err, user){
-                    if(err){console.log('error in creating user while signing up'); return}
+                    const pwd=req.body.password;
+                    const salt = await bcrypt.genSalt(10);
+         			const hashedPassword = await bcrypt.hash(pwd, salt);
+                    // const name=req.body.name;
+                    // const email=req.body.email;
+                    // const password=req.body.password;
+              let newUser= await User.create({name:req.body.name,email:req.body.email,password:hashedPassword});
+                    // if(err){console.log('error in creating user while signing up'); return}
                     req.flash('success','Account created');
                     return res.redirect('/users/sign-in');
-                })
+                
             }else{
                 req.flash('error','User already exists');
                 return res.redirect('back');
