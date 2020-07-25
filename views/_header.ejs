@@ -1,0 +1,46 @@
+<header>
+
+
+    <ul>
+        <% if (locals.user){ %>
+            <h1>Welcome to Codeial</h1>
+            <li>
+                <a href="/users/profile">
+                    <%= user.name %>
+                </a>
+            </li>
+            <li>
+                <a href="/users/sign-out">Sign Out</a>
+            <li>
+                <a href="" >Update password</a>
+            </li>
+            <form action="users/update-newpassword" method="POST">
+                <!-- <input type="text" name="name" placeholder="Your Name" required> -->
+                <input type="password" name="old_password" placeholder="Your old password" required>
+                <input type="password" name="password" placeholder="New Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                <input type="submit" value="Change Password">
+            
+            </form>
+
+
+        <% }else{ %>
+
+            <!-- <div>
+                
+            </div>
+
+            <li>
+                <a href="/users/sign-in">Sign In</a>
+            </li>
+
+            <li>
+                <a href="/users/sign-up">Sign Up</a>
+            </li> -->
+
+
+        <% } %>
+    </ul>
+
+     
+</header>

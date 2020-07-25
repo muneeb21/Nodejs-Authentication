@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    background-color: whitesmoke;
+}
+.whole-part{
+    color:whitesmoke;
+    height: 75vh;
+    width: 24%;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    /* border: solid 2px black; */
+    /* background-image: url(https://image.freepik.com/free-photo/man-working-with-laptop_385-19323865.jpg); */
+    background-image: url(https://storage.needpix.com/rsynced_images/iphone-1852901_1280.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: -1rem 0.3rem 3rem white;
+    background-blend-mode: saturation;
+    opacity: 0.95;
+}
+.heading{
+    height:25%;
+    width: 100%;
+    /* border: solid 2px black; */
+    /* background-color: brown; */
+}
+/* .heading h1{
+    padding-top: .5rem;
+    border: solid 2px black;
+}
+.heading h2{
+    padding-top: 1.2rem;
+    border: solid 2px black;
+   
+} */
+.content{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 1rem; */
+    /* background-color: cyan; */
+    
+    /* border: solid 2px black; */
+}
+.content div{
+   height:90%;
+   width:65%;
+   font-size: 1rem;
+   text-align: left;
+   padding-left:1rem ;
+   /* border: solid 1px black; */
+}
+.sign-in-up-home{
+    height: 17%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px black; */
+}
+.sign-in-up-home a{
+    height: 49%;
+    width: 40%;
+    /* border: solid 1px black; */
+    background-color: rgb(68, 145, 222);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    border-radius:20px;
+}
+
+/* sign-in-up-pages */
+
+.sign-in-form-container{
+    height:50%;
+    width: 100%;
+    margin-top: 1rem;
+  /* border: solid 1px black; */
+  /* background-color: cyan; */
+}
+.sign-in-form{
+    height:100%;
+    width: 100%;
+
+}
+.input-container{
+    height:23%;
+    width:100%;
+    /* border: solid 1px black; */
+
+}
+.sign-in-form div input{
+    height:70%;
+    width:80%;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 13px;
+    border: none;
+    
+}
+.forgot-password-div{
+    height:10%;
+    width:100%;
+    
+}
+.forgot-password-div a{
+    text-decoration: none;
+    color: rgb(68, 145, 222);
+    font-weight: 700;
+}
+.input-color{
+    background-color: rgb(230, 230, 230);
+}
+.sign-in-button{
+ background-color:rgb(68, 145, 222); 
+ padding-right: 13px;
+ color: white;
+ font-size: .9rem;
+ font-weight: 700;
+}
+
+.dont-have-an-account{
+    height: 8%;
+    width: 100%;
+    font-size: .9rem;
+    color:white;
+    /* border: solid 1px black; */
+}
+.dont-have-an-account a{
+    color: rgb(68, 145, 222);
+    font-weight: 700;
+}
