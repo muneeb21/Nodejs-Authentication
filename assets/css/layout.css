@@ -16,7 +16,7 @@ body{
     border-radius: 10px;
     box-shadow: -1rem 0.3rem 3rem white;
     background-blend-mode: saturation;
-    opacity: 0.95;
+    /* opacity: 0.85; */
 }
 .heading{
     height:25%;
@@ -79,6 +79,7 @@ body{
 .sign-in-form-container{
     height:50%;
     width: 100%;
+    /* background-color: aqua; */
     margin-top: 1rem;
   /* border: solid 1px black; */
   /* background-color: cyan; */
@@ -89,7 +90,7 @@ body{
 
 }
 .input-container{
-    height:23%;
+    height:22%;
     width:100%;
     /* border: solid 1px black; */
 
@@ -111,7 +112,11 @@ body{
 .forgot-password-div a{
     text-decoration: none;
     color: rgb(68, 145, 222);
-    font-weight: 700;
+    font-weight: bolder;
+    /* background-color: black; */
+    /* border-radius: 10px; */
+    padding-top: 10px;
+    
 }
 .input-color{
     background-color: rgb(230, 230, 230);
@@ -124,14 +129,35 @@ body{
  font-weight: 700;
 }
 
+.sign-in-with-google{
+ height: 15.5%;
+ width: 80%;
+ background-color: rgb(248, 73, 73);
+ /* margin-top: 10px; */
+ border-radius: 20px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+    
+}
+.sign-in-with-google a{
+    
+    text-decoration: none;
+    color: white;
+    font-size: .9rem;
+ font-weight: 700;
+}
 .dont-have-an-account{
     height: 8%;
     width: 100%;
-    font-size: .9rem;
+    margin-top: 10px;
+    font-size: .82rem;
+    font-weight: 700;
     color:white;
     /* border: solid 1px black; */
 }
 .dont-have-an-account a{
     color: rgb(68, 145, 222);
-    font-weight: 700;
+    font-weight:bolder ;
+    font-size: .95rem;
 }
