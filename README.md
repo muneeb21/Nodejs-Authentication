@@ -31,7 +31,7 @@ new application using Passport.js
 
 **Screenshots**
 
-![alt text](https://github.com/muneeb21/Nodejs-Authentication/tree/master/assets/screenshots/image2.png)
+![alt text](https://github.com/muneeb21/Nodejs-Authentication/blob/master/assets/screenshots/image2.png?raw=true)
 
-![alt text](https://github.com/muneeb21/Nodejs-Authentication/tree/master/assets/screenshots/image1.png)
+![alt text](https://github.com/muneeb21/Nodejs-Authentication/blob/master/assets/screenshots/image1.png?raw=true)
 
