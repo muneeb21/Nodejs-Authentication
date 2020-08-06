@@ -6,22 +6,22 @@ new application using Passport.js
 
 **System has following pages**
 
-> Introductory 
-> Sign in
-> Sign up
-> Session
-> User profile
+> Introductory <br />
+> Sign in<br />
+> Sign up<br />
+> Session<br />
+> User profile<br />
 
 **Routes**
 
-> /users/sign-in
-> /users/sign-up
-> /users/create-session
-> /users/create
-> /users/auth/google
-> /users/sign-out
-> /users/profile
-> /users/update-newpassword
+> /users/sign-in<br />
+> /users/sign-up<br />
+> /users/create-session<br />
+> /users/create<br />
+> /users/auth/google<br />
+> /users/sign-out<br />
+> /users/profile<br />
+> /users/update-newpassword<br />
 
 **Keys that you need to add in config/passport-google-oauth2-strategy**
 
@@ -31,7 +31,7 @@ new application using Passport.js
 
 **Screenshots**
 
-![alt text](https://github.com/muneeb21/Nodejs-Authentication/tree/master/assets/screenshots/image2)
+![alt text](https://github.com/muneeb21/Nodejs-Authentication/tree/master/assets/screenshots/image2.png)
 
-![alt text](https://github.com/muneeb21/Nodejs-Authentication/tree/master/assets/screenshots/image1)
+![alt text](https://github.com/muneeb21/Nodejs-Authentication/tree/master/assets/screenshots/image1.png)
 
