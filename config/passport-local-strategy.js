@@ -17,14 +17,26 @@ passport.use(new LocalStrategy({
                 console.log('Error in finding user --> Passport');
                 return done(err);
             }
-        //    let result=bcrypt.compare(password,user.password)
-            if (!user || !bcrypt.compare(password,user.password)){
+            // If user does not exists
+            if (!user ){
             console.log('Invalid Username/Password');
             req.flash('error','Invalid Username/Password');
             return done(null, false);
             }
+            // Compare the password mentioned
+            bcrypt.compare(password, user.password, (err, result) => {
+				if (err){ throw err;}
+                if (result) 
+                {
+                    req.flash('success','Logged in successfully');
+                    return done(null, user);}
+                else 
+                {
+                    req.flash('error','Invalid Username/Password');
+                    return done(null, false, );}
+			});
 
-            return done(null, user);
+            // return done(null, user);
         });
     }
 

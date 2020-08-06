@@ -1,12 +1,14 @@
 const passport=require('passport');
 const googleStrategy=require('passport-google-oauth').OAuth2Strategy;
+
+// to generate a random password
 const crypto=require('crypto');
 
 
 const User=require('../models/user');
 passport.use(new googleStrategy({
-       clientID:'300544464692-u7n5ba3lscfm0nu6s0sgbo2ocsk9222i.apps.googleusercontent.com',
-       clientSecret: 'm93EAgBpA08Mc26x0DnN4M-O',
+       clientID:'',
+       clientSecret: '',
        callbackURL: 'http://localhost:8000/users/auth/google/callback'
     },
 
